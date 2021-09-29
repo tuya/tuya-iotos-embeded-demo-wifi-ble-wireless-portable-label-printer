@@ -42,7 +42,7 @@ typedef struct{
 ****************************variable define***************************
 *********************************************************************/
 SEM_HANDLE pv_handle;
-TY_BMPINFO_T bmp_info;
+STATIC TY_BMPINFO_T bmp_info;
 THREAD_HANDLE download_thrd;
 /*********************************************************************
 ****************************function define***************************
@@ -229,7 +229,6 @@ VOID tuya_down_print_file_thread(VOID *param)
     while (1) {
 
         CHAR_T *image_url = (CHAR_T *)malloc(512*sizeof(CHAR_T));
-        strcpy(image_url, "https://storage-proxy.tuyacn.com:7779/dst=");
 
         tuya_hal_semaphore_wait(pv_handle);
         strcat(image_url, bmp_info.first_url);
