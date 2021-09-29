@@ -227,7 +227,6 @@ VOID tuya_down_print_file_thread(VOID *param)
     CHAR_T file_hmac[32];
 
     while (1) {
-
         CHAR_T *image_url = (CHAR_T *)malloc(512*sizeof(CHAR_T));
 
         tuya_hal_semaphore_wait(pv_handle);
