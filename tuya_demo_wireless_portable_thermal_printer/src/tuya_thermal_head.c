@@ -47,7 +47,7 @@ STATIC UCHAR_T* g_spi_rxbuf = NULL;
 STATIC struct spi_message g_spi_msg = {
 	.send_buf = g_spi_txbuf,
 	.send_len = 48,
-	.recv_buf = g_spi_txbuf,
+	.recv_buf = g_spi_rxbuf,
 	.recv_len = 1,
 };
 UINT8_T thermal_buf[4] = {0};
