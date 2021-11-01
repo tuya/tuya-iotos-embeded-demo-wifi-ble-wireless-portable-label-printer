@@ -43,7 +43,7 @@
 *********************************************************************/
 /*SPI struct init*/
 STATIC UCHAR_T g_spi_txbuf[48];
-STATIC UCHAR_T* g_spi_rxbuf = NULL;
+STATIC UCHAR_T g_spi_rxbuf[48];
 STATIC struct spi_message g_spi_msg = {
 	.send_buf = g_spi_txbuf,
 	.send_len = 48,
